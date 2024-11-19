@@ -69,3 +69,141 @@
 
 </body>
 </html>
+
+
+Generated from Claude!!
+
+// App.vue
+<template>
+  <div id="app">
+    <router-view></router-view>
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+</script>
+
+// router/index.js
+<script>
+import { createRouter, createWebHistory } from 'vue-router'
+import OperatorSelection from '../views/OperatorSelection.vue'
+import JobList from '../views/JobList.vue'
+
+const routes = [
+  { path: '/', component: OperatorSelection },
+  { path: '/jobs/:operator', component: JobList, props: true }
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes
+})
+
+export default router
+</script>
+
+// views/OperatorSelection.vue
+<template>
+  <div class="operator-selection">
+    <h1>Select an Operator</h1>
+    <div class="operators">
+      <button 
+        v-for="op in operators" 
+        :key="op" 
+        @click="selectOperator(op)"
+      >
+        {{ op }}
+      </button>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const operators = ref(['Operator 1', 'Operator 2', 'Operator 3'])
+
+const selectOperator = (operator) => {
+  router.push({ path: `/jobs/${operator}` })
+}
+</script>
+
+// views/JobList.vue
+<template>
+  <div class="job-list">
+    <h1>Jobs for {{ operator }}</h1>
+    <button
+      v-for="job in jobs"
+      :key="job.id"
+      :class="{ 'started': job.status === 'started', 'finished': job.status === 'finished' }"
+      @click="toggleJobStatus(job)"
+    >
+      {{ job.name }} - {{ job.status }}
+    </button>
+    <button @click="$router.push('/')">Back to Operators</button>
+  </div>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const operator = route.params.operator
+const jobs = ref([])
+
+onMounted(() => {
+  // Simulate job data fetch based on operator
+  jobs.value = [
+
+ {
+            "tId": 1,
+            "title": "Task J.24.022-01",
+            "availableOps": [
+                1,
+                2
+            ],
+            "records": [
+                {
+                    "opId": 1,
+                    "period": {
+                        "start": "2024-11-15T11:25:43.511Z",
+                        "end": null
+                    }
+                }
+            ]
+        },
+
+
+
+    { id: 1, name: 'Job A', status: 'pending', operator: 'Operator 1' },
+    { id: 2, name: 'Job B', status: 'pending', operator: 'Operator 1' },
+    { id: 3, name: 'Job C', status: 'pending', operator: 'Operator 2' }
+  ].filter(job => job.operator === operator)
+})
+
+const toggleJobStatus = (job) => {
+  if (job.status === 'pending') {
+    job.status = 'started'
+  } else if (job.status === 'started') {
+    job.status = 'finished'
+  }
+}
+</script>
+
+<style scoped>
+.started { background-color: yellow; }
+.finished { background-color: green; color: white; }
+</style>
+
+// main.js
+<script>
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+
+createApp(App).use(router).mount('#app')
+</script>

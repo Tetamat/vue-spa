@@ -1,52 +1,66 @@
 {
     "operations": [
-      {
-        "oId": 1,
-    "title": "Documentation"},
-    {
-        "oId": 2,
-    "title": "Supply"},
-    {
-        "oId": 3,
-    "title": "Laser"},
-    {
-        "oId": 4,
-    "title": "Grind"},
-    {
-        "oId": 5,
-    "title": "Bend"},
-    {
-        "oId": 6,
-    "title": "Late"},
-    {
-        "oId": 7,
-    "title": "Milling"},
-    {
-        "oId": 8,
-    "title": "Routing"},
-    {
-        "oId": 9,
-    "title": "Cutting"},
-    {
-        "oId": 10,
-    "title": "Welding"},
-    {
-        "oId": 11,
-    "title": "Cleaning"},
-    {
-        "oId": 12,
-    "title": "Assembly"},
-    {
-        "oId": 13,
-    "title": "Test"},
-    {
-        "oId": 14,
-    "title": "Disassembly"},
-    {
-        "oId": 15,
-    "title": "Other"}
-]
-   ,
+        {
+            "oId": 1,
+            "title": "Documentation"
+        },
+        {
+            "oId": 2,
+            "title": "Supply"
+        },
+        {
+            "oId": 3,
+            "title": "Laser"
+        },
+        {
+            "oId": 4,
+            "title": "Grind"
+        },
+        {
+            "oId": 5,
+            "title": "Bend"
+        },
+        {
+            "oId": 6,
+            "title": "Late"
+        },
+        {
+            "oId": 7,
+            "title": "Milling"
+        },
+        {
+            "oId": 8,
+            "title": "Routing"
+        },
+        {
+            "oId": 9,
+            "title": "Cutting"
+        },
+        {
+            "oId": 10,
+            "title": "Welding"
+        },
+        {
+            "oId": 11,
+            "title": "Cleaning"
+        },
+        {
+            "oId": 12,
+            "title": "Assembly"
+        },
+        {
+            "oId": 13,
+            "title": "Test"
+        },
+        {
+            "oId": 14,
+            "title": "Disassembly"
+        },
+        {
+            "oId": 15,
+            "title": "Other"
+        }
+    ],
     "tasks": [
         {
             "tId": 1,
@@ -55,13 +69,16 @@
                 1,
                 2
             ],
-            "records": [{
-                "opId": 1,
-                "period": {
-                    "start": "2024-11-15T11:25:43.511Z",
-                    "end": null
+            "current": 1,
+            "records": [
+                {
+                    "opId": 1,
+                    "period": {
+                        "start": "2024-11-15T11:25:43.511Z",
+                        "end": null
+                    }
                 }
-            }]
+            ]
         },
         {
             "tId": 2,
@@ -71,6 +88,7 @@
                 2,
                 3
             ],
+            "current": 0,
             "records": []
         },
         {
@@ -81,19 +99,23 @@
                 2,
                 3
             ],
-            "records": [{
-                "opId": 1,
-                "period": {
-                    "start": "2024-11-14T11:25:43.511Z",
-                    "end": "2024-11-14T16:25:43.511Z"
-                }},
+            "current": 2,
+            "records": [
                 {
-                "opId": 2,
-                "period": {
-                    "start": "2024-11-15T11:10:43.511Z",
-                    "end": null
+                    "opId": 1,
+                    "period": {
+                        "start": "2024-11-14T11:25:43.511Z",
+                        "end": "2024-11-14T16:25:43.511Z"
+                    }
+                },
+                {
+                    "opId": 2,
+                    "period": {
+                        "start": "2024-11-15T11:10:43.511Z",
+                        "end": null
+                    }
                 }
-            }]
+            ]
         },
         {
             "tId": 4,
@@ -102,7 +124,8 @@
                 1,
                 3
             ],
-           "records": []
+            "current": 0,
+            "records": []
         },
         {
             "tId": 5,
@@ -111,13 +134,16 @@
                 2,
                 3
             ],
-            "records": [{
-                "opId": 1,
-                "period": {
-                    "start": "2024-11-14T11:25:43.511Z",
-                    "end": null
+            "current": 1,
+            "records": [
+                {
+                    "opId": 1,
+                    "period": {
+                        "start": "2024-11-14T11:25:43.511Z",
+                        "end": null
+                    }
                 }
-            }]
+            ]
         }
     ]
 }
