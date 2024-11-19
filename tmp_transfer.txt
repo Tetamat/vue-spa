@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page1">
+        <div class="header">
+            <div class="circle"></div>
+            <p>Select An Operator</p>
+            <div class="circle"></div>
+        </div>
+
+        <div class="content">
+            <div class="content-box">
+                <p>Select an Operator</p>
+                <p>Operator Selector</p>
+            </div>
+
+            <div class="buttons-container">
+                <button class="button">Select</button>
+                <button class="button">Start</button>
+                <button class="button">Start</button>
+                <button class="button">Complete</button>
+                <button class="button">Complete</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page2">
+        <div class="header">
+            <div class="circle"></div>
+            <p>Tasks for Operator</p>
+            <div class="circle"></div>
+        </div>
+
+        <div class="content">
+            <div class="content-box">
+                <p>Tasks for Operator</p>
+                <p>Tasks for Operator</p>
+                </div>
+
+            <div class="buttons-container">
+                <button class="button">1</button>
+                <button class="button">2</button>
+                <button class="button">3</button>
+                <button class="button">4</button>
+                <button class="button">5</button>
+                <button class="button">6</button>
+                <button class="button">7</button>
+                <button class="button">8</button>
+                <button class="button">9</button>
+                <button class="button">10</button>
+                <button class="button">11</button>
+                <button class="button">12</button>
+                <button class="button">13</button>
+                <button class="button">14</button>
+                <button class="button">15</button>
+                <button class="button">16</button>
+                <button class="button">17</button>
+                <button class="button">18</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

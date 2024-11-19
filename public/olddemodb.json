@@ -1,0 +1,89 @@
+{
+    "operations": [
+        {
+            "oId": 1,
+            "title": "Operation 1"
+        },
+        {
+            "oId": 2,
+            "title": "Operation 2"
+        },
+        {
+            "oId": 3,
+            "title": "Operation 3"
+        }
+    ],
+    "tasks": [
+        {
+            "tId": 1,
+            "title": "Task J.24.022-01",
+            "availableOps": [
+                1,
+                2
+            ],
+            "records": [{
+                "opId": 1,
+                "period": {
+                    "start": "2024-11-15T11:25:43.511Z",
+                    "end": null
+                }
+            }]
+        },
+        {
+            "tId": 2,
+            "title": "Task J.24.022-01",
+            "availableOps": [
+                1,
+                2,
+                3
+            ],
+            "records": []
+        },
+        {
+            "tId": 3,
+            "title": "Task J.24.022-02",
+            "availableOps": [
+                1,
+                2,
+                3
+            ],
+            "records": [{
+                "opId": 1,
+                "period": {
+                    "start": "2024-11-14T11:25:43.511Z",
+                    "end": "2024-11-14T16:25:43.511Z"
+                }},
+                {
+                "opId": 2,
+                "period": {
+                    "start": "2024-11-15T11:10:43.511Z",
+                    "end": null
+                }
+            }]
+        },
+        {
+            "tId": 4,
+            "title": "Task J.24.022-01",
+            "availableOps": [
+                1,
+                3
+            ],
+           "records": []
+        },
+        {
+            "tId": 5,
+            "title": "Task J.24.022-01",
+            "availableOps": [
+                2,
+                3
+            ],
+            "records": [{
+                "opId": 1,
+                "period": {
+                    "start": "2024-11-14T11:25:43.511Z",
+                    "end": null
+                }
+            }]
+        }
+    ]
+}
