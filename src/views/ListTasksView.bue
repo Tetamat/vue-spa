@@ -44,3 +44,4 @@ onMounted(() => {
 .started { background-color: yellow; }
 .finished { background-color: green; color: white; }
 </style>
+

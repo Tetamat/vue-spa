@@ -15,14 +15,21 @@ const selectOperation = (operationID) => {
   <div class="operator-selection">
     <div class="header">
       <div class="circle"></div>
-      <h1>Select an Operator</h1>
+      <h1>Select an Operation</h1>
       <div class="circle"></div>
     </div>
 
-    <div class="operators">
-      <button v-for="op in operations" :key="op" @click="selectOperation(op.oId)">
-        {{ op.title }}
-      </button>
+    <div class="operations">
+      <!-- <button v-for="op in operations" :key="op" @click="selectOperation(op.oId)">
+        {{ op.title }} -->
+         <select
+        v-model="selectedOperation"
+        name="operations"
+        id="operationsDropDown">
+        <option v-for="op in operations" :key="op" @click="selectOperation(op.oId)">
+          {{ op.title }}</option>
+      </select>
+      <!-- </button> -->
     </div>
   </div>
 </template>
@@ -77,13 +84,13 @@ body {
 }
 
 /* Button Container Styles */
-.operators {
+.operations {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.operators button {
+.operations button {
   width: 100%;
   padding: 10px 20px;
   margin-bottom: 10px;
