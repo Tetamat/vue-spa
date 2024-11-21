@@ -8,8 +8,8 @@ const taskTemplate = {
 
 // create new record based on the template
 
-export function createRecord(id, title, availableOps, current, records)  {
-  const newRecord = Object.create(taskTemplate);
+export function createRecord(id, title, availableOps, current, records) {
+  const newRecord = Object.assign({}, taskTemplate);
   newRecord.tId = id;
   newRecord.title = title;
   newRecord.availableOps = availableOps;
@@ -22,9 +22,11 @@ export function convertToJSON(data) {
   return JSON.stringify(data);
 }
 
-export taskStatus (tasks, opId, recordId) {
-
+export function taskStatus() {
+  console.log("todo: extract tasks and compare start and end dates");
+  return 0;
 }
+
 export function getTaskStatus(data) {
-   data.records.filter((r) => r.opId == data.current);
+  return data.records.filter((r) => r.opId === data.current);
 }
