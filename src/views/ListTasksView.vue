@@ -2,7 +2,7 @@
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import jsonDB from "@/assets/demodb.json";
-import { taskStatus } from "@/assets/helpers.js";
+// import { taskStatus } from "@/assets/helpers.js";
 
 const route = useRoute();
 const oID = route.params.opID;
@@ -11,7 +11,7 @@ const operation = ref({});
 const now = Date.now();
 const currentOps = ref({});
 
-onMounted(() => {
+onMounted(async() => {
   operation.value = jsonDB.operations.filter((o) => o.oId == oID)[0];
   tasks.value = jsonDB.tasks.filter((t) => t.currentOp == operation.value.oId);
   console.log(tasks.value);
