@@ -14,7 +14,7 @@ const selectOperation = (opID) => {
 
 <template>
   <div id="app">
-    <h1>Select an Operation</h1>
+    <h1>Select an Operation Test</h1>
     <div class="operation-select">
       <button
         v-for="op in operations"

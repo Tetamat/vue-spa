@@ -1,14 +1,20 @@
 <script setup>
 import { ref, onMounted, onBeforeMount } from "vue";
+import db from "@/firebase";
 // import { axios } from 'axios';
 import jsonData from "@/assets/demodb.json"; // Adjust the path as needed
+
 
 const operations = ref({});
 const taskData = ref({});
 // const addTask = ref({});
 
+operations.value = db.operations
+
+
 const addTask = () => {
   console.log(taskData.value);
+  db.tasks.add(taskData.value);
   taskData.value = {
     title: "",
     number: "",
